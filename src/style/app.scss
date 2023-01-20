@@ -1,8 +1,16 @@
+// Style modules
+@import './variables.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './reading-list.scss';
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
 .app {
   text-align: center;
 }
 
-.header {
-  height: 200px;
-  background-color: antiquewhite;
+body {
+  background-color: $background-color;
 }

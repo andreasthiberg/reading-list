@@ -1,0 +1,82 @@
+// Header layout.
+
+.header {
+  height: 100px;
+  background-color: $header-color;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-title-container {
+  height: 80px;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+// Hamburger menu. 
+
+.header-menu-icon {
+  transform: scale(2);
+  position:absolute;
+  right: 10px;
+  width: 100px;
+  margin-top: 57px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-menu-icon {
+  color: white;
+}
+
+.burger-menu-container {
+  position: relative;
+}
+
+.burgermenu {
+  display: none;
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: darkcyan;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 0;
+  margin: 0;
+  li {
+    cursor: pointer;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    &:hover {
+      color:white;
+    }
+  }
+}
+
+.burgermenu.show-menu {
+  width: 200px;
+  display: inline;
+}
+
+a {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #3fffd2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.burgermenu li:first-child {
+  margin-top: 7rem;
+}
