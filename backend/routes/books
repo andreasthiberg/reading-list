@@ -1,0 +1,18 @@
+// Routes for interacting with book database.
+
+let express = require('express');
+const database = require('../models/database');
+const bookModel = require('../models/books')
+let router = express.Router();
+
+// Returns all books.
+router.get('/', function(req, res) {
+
+    (async () => {
+        const books = await bookModel.getAll();
+        console.log(books)
+        res.json({books:books});
+    })();
+});
+
+module.exports = router;
